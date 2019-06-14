@@ -1,0 +1,11 @@
+#STEP ONE
+#CREATING A FILE USING A TEXT EDITOR
+
+#Pie chart in R
+parts <- c(10, 12, 4, 16, 8) 
+lbls <- c("US", "UK", "Australia", "Germany", "France")
+pct <- round(slices/sum(parts)*100)
+lbls <- paste(lbls, pct) # add percents to labels 
+lbls <- paste(lbls,"%",sep="") # ad % to labels 
+pie(parts,labels = lbls, col=rainbow(length(lbls)),
+   main="Pie Chart of Countries")
